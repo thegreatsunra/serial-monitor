@@ -1,8 +1,6 @@
-# python-boilerplate
+# serial-monitor
 
-> Boilerplates are like toothbrushes. Everyone has one and no one wants to use anyone else's.
-> 
-> This one is mine.
+> Monitors a serial port and logs output to a log file
 
 ## Dependencies
 
@@ -33,4 +31,4 @@ poetry update
 
 The MIT License (MIT)
 
-Copyright (c) 2022 Dane Petersen
+Copyright (c) 2023 Dane Petersen
