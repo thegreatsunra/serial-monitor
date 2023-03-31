@@ -1,0 +1,13 @@
+[Unit]
+Description=Serial Monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+User=ribbon
+Group=ribbon
+ExecStart=/home/{USERNAME}/.local/bin/poetry --directory /home/{USERNAME}/serial-monitor/ run /home/{USERNAME}/serial-monitor/src/main.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
