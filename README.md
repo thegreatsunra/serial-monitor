@@ -6,6 +6,7 @@
 
 - python
 - pyenv
+- pipx (for installing poetry)
 - poetry
 
 ## Usage
