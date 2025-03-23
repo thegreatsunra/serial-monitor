@@ -17,7 +17,7 @@ def read_serial_and_write_to_log():
     """
     Reads from serial port and writes output to log file
     """
-    log_file = "/home/folk/stuff/logs/sump_log.txt"
+    log_file = "/home/{USERNAME}/stuff/logs/serial_log.txt"
     serial_port = "/dev/ttyACM0"
     while True:
         try:

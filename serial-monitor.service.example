@@ -4,9 +4,11 @@ After=multi-user.target
 
 [Service]
 Type=simple
-User=ribbon
-Group=ribbon
-ExecStart=/home/{USERNAME}/.local/bin/poetry --directory /home/{USERNAME}/serial-monitor/ run /home/{USERNAME}/serial-monitor/src/main.py
+User={USERNAME}
+Group={USERNAME}
+ExecStart=/home/{USERNAME}/.local/bin/poetry --directory /home/{USERNAME}/stuff/serial-monitor/ run /home/{USERNAME}/stuff/serial-monitor/src/main.py
+## depending on how it was installed poetry might be here:
+# ExecStart=/home/{USERNAME}/.pyenv/shims/poetry --directory /home/{USERNAME}/stuff/serial-monitor/ run /home/{USERNAME}/stuff/serial-monitor/src/main.py
 Restart=on-abort
 
 [Install]
