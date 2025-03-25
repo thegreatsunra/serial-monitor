@@ -46,8 +46,8 @@ def log_serial_data(ser):
                 line = ser.readline().decode("utf-8").rstrip()
                 logging.info(line)
             else:
-                time.sleep(0.1)  # Reduce CPU usage if there's no data
-        except (serial.SerialException, UnicodeDecodeError) as e:
+                time.sleep(0.1)
+        except (serial.SerialException, UnicodeDecodeError, OSError) as e:
             logging.error(f"Error reading from serial port: {e}")
             ser.close()
             break  # Exit to attempt reconnection
