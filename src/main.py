@@ -49,6 +49,8 @@ def log_serial_data(ser, log_file):
                 logging.info(f"Received: {timestamped_line}")
                 with open(log_file, mode="a", encoding="utf-8") as file:
                     file.write(timestamped_line + "\n")
+            else:
+                time.sleep(0.1)  # Reduce CPU usage if there's no data
         except (serial.SerialException, UnicodeDecodeError) as e:
             logging.error(f"Error reading from serial port: {e}")
             ser.close()
